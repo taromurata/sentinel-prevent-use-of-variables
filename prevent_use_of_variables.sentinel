@@ -1,0 +1,23 @@
+import "time"
+import "strings"
+import "decimal"
+
+import "tfrun"
+
+variables_to_search = [
+	"TFC_DUMMY_VAR_1",
+	"TFC_DUMMY_VAR_2",
+	"TFC_DUMMY_VAR_3",
+]
+
+violated_variables = filter tfrun.variables as name, _ {
+	name in variables_to_search
+}
+
+# 以下の変数は設定しないでください。
+# - TFC_DUMMY_VAR_1
+# - TFC_DUMMY_VAR_2
+# - TFC_DUMMY_VAR_3
+main = rule {
+	violated_variables is empty
+}

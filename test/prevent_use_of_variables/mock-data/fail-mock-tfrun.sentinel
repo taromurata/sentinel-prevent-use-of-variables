@@ -1,0 +1,6 @@
+variables = {
+	"TFC_DUMMY_VAR_2": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+}

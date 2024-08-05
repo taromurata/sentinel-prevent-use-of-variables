@@ -1,0 +1,10 @@
+variables = {
+	"TFC_DUMMY_VAR_4": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+	"TFC_DUMMY_PROVIDER_AUTH": {
+		"category":  "terraform",
+		"sensitive": false,
+	},
+}
